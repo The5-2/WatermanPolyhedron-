@@ -1,0 +1,34 @@
+[submodule "submodule/glm"]
+	path = submodule/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "submodule/assimp"]
+	path = submodule/assimp
+	url = https://github.com/assimp/assimp.git
+[submodule "submodule/cpp-taskflow/cpp-taskflow"]
+	path = submodule/cpp-taskflow
+	url = https://github.com/cpp-taskflow/cpp-taskflow.git
+[submodule "submodule/external/easy-qhull"]
+	path = submodule/external/easy-qhull
+	url = https://github.com/yuki-koyama/easy-qhull.git
+[submodule "glfw"]
+	path = glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "glew-cmake"]
+	path = glew-cmake
+	url = https://github.com/Perlmint/glew-cmake.git
+[submodule "submodule/glfw"]
+	path = submodule/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "submodule/glew-cmake"]
+	path = submodule/glew-cmake
+	url = https://github.com/Perlmint/glew-cmake.git
+[submodule "contrib/external/easy-qhull"]
+	path = contrib/external/easy-qhull
+	url = https://github.com/yuki-koyama/easy-qhull.git
+
+
+
+git submodule add https://github.com/Perlmint/glew-cmake.git submodules/
+git submodule add https://github.com/glfw/glfw.git submodules/
+git submodule add https://github.com/g-truc/glm.git submodules/
+git submodule add https://github.com/yuki-koyama/easy-qhull.git submodules/

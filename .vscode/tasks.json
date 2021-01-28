@@ -1,0 +1,77 @@
+//g++
+//https://www.youtube.com/watch?v=sXW2VLrQ3Bs
+//https://code.visualstudio.com/docs/cpp/config-mingw
+
+//https://code.visualstudio.com/docs/cpp/config-msvc#_start-vs-code-from-the-developer-command-prompt
+//https://stackoverflow.com/questions/57225452/visual-studio-code-msvc-cl-exe-not-found-after-installing-build-tools
+
+//https://www.40tude.fr/blog/compile-cpp-code-with-vscode-cmake-nmake/
+//Visual studio command prompts:
+//C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools\VC
+
+//Visual Studio Terminal:
+//H:\Program Files (x86)\Microsoft Visual Studio\2017\Community>d:
+//D:\>cd D:\Dev\ProjectsRendering\VSC_Example
+//D:\Dev\ProjectsRendering\VSC_Example>code .
+//D:\Dev\ProjectsRendering\VSC_Example>
+
+// {
+//   "label": "build g++",
+//   "type": "shell",
+//   "command": "g++",
+//   "args": [
+//     "-g",
+//     "-o",
+//     "helloworld",
+//     "main.cpp"
+//   ],
+//   "group": {
+//     "kind": "build",
+//     "isDefault": true
+//   }
+// }
+
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "CMake Debug",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceRoot}/build"
+        },
+        "command": "CMake",
+        "args": [
+          "-G",
+          "NMake Makefiles",
+          "-DCMAKE_BUILD_TYPE=Debug",
+          ".."
+        ],
+        "problemMatcher": []
+      },
+      {
+        "label": "Make",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceRoot}/build"
+        },
+        "command": "nmake",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Run",
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceRoot}/build"
+        },
+        "command": "start",
+        "args": [
+          "waterman.exe"
+        ],
+        "problemMatcher": []
+      }
+    ]
+  }
